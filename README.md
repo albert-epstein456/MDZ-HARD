@@ -1,4 +1,4 @@
-# MDZ VH
+# MDZ HARD VH
 ***[Bấm đây để mở game](https://albert-epstein456.github.io/MDZ-VH/1.9.6_HARD/)***
 ---
 **MDZ VH chạy trên Web**
