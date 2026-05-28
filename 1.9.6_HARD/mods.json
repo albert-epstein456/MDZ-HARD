@@ -2,20 +2,23 @@
 	"mods":[
 		{
 			"name":"Perfomance Tab",
-			"description":"Hiển thị chi tiết hiệu năng game theo thời gian thực. - By Civert0",
+			"description":"Hiển thị chi tiết hiệu năng game theo thời gian thực.",
 			"script":"perf_mdz",
+			"notes":"Script của Civert0<br>Cái này trg game 0 tắt đc.",
 			"version":"1.0"
 		},
 		{
 			"name":"Item Spawner",
-			"description":"Spawn item trực tiếp hoặc ở dưới đất. - By Civert0",
+			"description":"Spawn item trực tiếp hoặc ở dưới đất. Bấm Alt+I để mở lại.",
 			"script":"item_spawner_test",
+			"notes":"Script của Civert0<br>Somehow độ bền bị chỉnh xuống 1%.",
 			"version":"1.0"
 		},
 		{
 			"name":"Inject Tool",
-			"description":"\"Cheat Engine\" của MDZ - By Civert0 - VN trans by Dungx <br>đi kém với quicksave/load  - by Dungx",
+			"description":"\"Cheat Engine\" của MDZ, hack tgian, vật phẩm, save/load, spawn xe npc, teleport v.v .",
 			"script":"c2injt_loader",
+			"notes":"Script của Civert0, chỉnh sửa &amp; việt hóa bới Dungx<br>Đối với máy yếu thì 0 nên bật (siêu lag), nếu muốn bật thì đừng mở màn hình script khi game chưa chạy.",
 			"version":"30.2"
 		}
 	]

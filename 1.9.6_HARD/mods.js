@@ -14,10 +14,6 @@ document.head.append(link);
 
 const style=document.createElement("style");
 style.innerHTML=/*css*/ `
-@font-face {
-	font-weight: normal;
-	font-style: normal;
-}
 #mods{
 	font-family: monospace;
 	position:fixed;
@@ -36,19 +32,34 @@ style.innerHTML=/*css*/ `
 }
 #mods .content{
 	position: relative;
-	background:#111;
+	background: #111;
 	text-align:center;
 	padding:32px;
 	border-radius:4px;
 }
-#mods .title{
+/* link rainbow: https://www.html-code-generator.com/html/rainbow-text-generator#css-rainbow */
+#mods .welcometitle{
+    font-size: 30px;
+	margin-bottom: 10px;
+    background: linear-gradient(to left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    animation: rainbow-move-left-right 5s linear infinite alternate;
+    -webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
+	letter-spacing: 2px;
+}
+@keyframes rainbow-move-left-right {
+    0% {background-position: 0 0}
+    100% {background-position: -500px 0}
+}
+#mods .modlisttitle{
 	font-size:20px;
 	font-weight: bold;
+	margin-bottom:10px;
 }
 #mods .list{
-	margin-top:32px;
 	font-family: monospace;
-	background:#222;  
+	background: #222;  
 	overflow: auto;
 	max-height: calc(100% - 82px);
 	width:480px;
@@ -64,7 +75,7 @@ style.innerHTML=/*css*/ `
 	user-select: none;
 }
 #mods .list label:hover{
-	background:rgba(255,255,255,.025);
+	background:rgba(255,255,255,.025);	
 }
 #mods .list label div{
 	font-weight: bold;
@@ -83,6 +94,14 @@ style.innerHTML=/*css*/ `
 #mods .list .description{
 	font-size:12px;
 	color:#aaa;
+	display:block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+#mods .list .notes{
+	font-style: italic;
+	font-weight: normal;
+	font-size:12px;
 	display:block;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -128,7 +147,11 @@ style.innerHTML=/*css*/ `
 	cursor: pointer;
 }
 #mods .start:hover{
-	color:#bc4b4b;
+    background: linear-gradient(to left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
+    animation: rainbow-move-left-right 5s linear infinite alternate;
+    -webkit-background-clip: text;
+    background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 `;
 document.head.append(style);
@@ -150,10 +173,16 @@ let list=``;
 for(const mod of mods){
 	let checked="";
 	if(install.includes(mod.script)) checked="checked";
-	if(mod.description=="") mod.description="&nbsp;"
+	if(mod.description=="") mod.description="&nbsp;";
+	if(mod.notes=="") mod.notes="&nbsp;";
 	list+=/*html*/`
 		<label>
-			<div><span class="mod_name">${mod.name}</span><span class="version"> ver.${mod.version}</span> <span class="description">${mod.description}</span></div>
+			<div>
+				<span class="mod_name">${mod.name}</span>
+				<span class="version"> ver.${mod.version}</span>
+				<span class="description">${mod.description}</span>
+				<span class="notes">${mod.notes}</span>
+			</div>
 			<input type="checkbox" data-mod="${mod.script}" ${checked}>
 			<mark></mark>
 		</label>
@@ -167,7 +196,8 @@ const div=document.createElement("div");
 div.id="mods";
 div.innerHTML=/*html*/`
 	<div class="content">
-		<p class = "title">Danh sách MODS:<br>
+		<p class="welcometitle">Welcome to MDZ</p>
+		<p class="modlisttitle">Danh sách MODS:<br>
 		</p>
 		<div class="list">
 			${list}
