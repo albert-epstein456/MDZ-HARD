@@ -16,3 +16,7 @@
 https://web.telegram.org/k/#@likefreefun
 - Grip Minidayz vn:<br>
 https://www.facebook.com/groups/711416839430296
+- Grip Minidayz Community:<br>
+https://www.facebook.com/groups/113129736106807
+- Grip Mod:<br>
+https://www.facebook.com/groups/5040610139346983
