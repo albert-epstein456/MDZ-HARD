@@ -7,7 +7,7 @@
 - Mod Loader của **AlphaSystemsPL**
 [Github](https://github.com/AlphaSystemsPL)<br>
 (tui có chỉnh một chút để load được mod ở bản này - Dungx)
-- Script toolkit của **civert0**
+- Script toolkit, perf window, lootbox, v.v (chi tiết ở trong game) của **civert0**
 [FB](https://www.facebook.com/darren276/)
 - Code quicksave của **cplusplusnoob**
 [YTB](https://www.youtube.com/@cplusplusnoob-g3h)<br>
