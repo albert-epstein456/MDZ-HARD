@@ -38,15 +38,17 @@ style.innerHTML=/*css*/ `
 	border-radius:4px;
 }
 /* link rainbow: https://www.html-code-generator.com/html/rainbow-text-generator#css-rainbow */
-#mods .welcometitle{
-    font-size: 30px;
+#mods .welcome-title{
+	font-size: 30px;
 	margin-bottom: 10px;
+	letter-spacing: 2px;
+}
+#mods .rainbow-text{
     background: linear-gradient(to left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
     animation: rainbow-move-left-right 5s linear infinite alternate;
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
-	letter-spacing: 2px;
 }
 @keyframes rainbow-move-left-right {
     0% {background-position: 0 0}
@@ -88,12 +90,16 @@ style.innerHTML=/*css*/ `
 	color:#fff;
 }
 #mods .list .version{
-	font-size:15px;
-	color:#aaa;
+	font-size:13px;
+	color: #aaa;
+}
+#mods .list .author{
+	font-size:14px;
+	color: #aaa;
 }
 #mods .list .description{
-	font-size:12px;
-	color:#aaa;
+	font-size:15px;
+	color: #bbb;
 	display:block;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -152,6 +158,7 @@ style.innerHTML=/*css*/ `
     -webkit-background-clip: text;
     background-clip: text;
 	-webkit-text-fill-color: transparent;
+	letter-spacing: 2px;
 }
 `;
 document.head.append(style);
@@ -173,13 +180,14 @@ let list=``;
 for(const mod of mods){
 	let checked="";
 	if(install.includes(mod.script)) checked="checked";
-	if(mod.description=="") mod.description="&nbsp;";
+	if(mod.description=="") mod.description="No description.";
 	if(mod.notes=="") mod.notes="&nbsp;";
 	list+=/*html*/`
 		<label>
 			<div>
 				<span class="mod_name">${mod.name}</span>
 				<span class="version"> ver.${mod.version}</span>
+				<p class="author rainbow-text">Làm bởi: ${mod.author}</p>
 				<span class="description">${mod.description}</span>
 				<span class="notes">${mod.notes}</span>
 			</div>
@@ -196,7 +204,7 @@ const div=document.createElement("div");
 div.id="mods";
 div.innerHTML=/*html*/`
 	<div class="content">
-		<p class="welcometitle">Welcome to MDZ</p>
+		<p class="rainbow-text welcome-title">!!! Welcome to MDZ !!!</p>
 		<p class="modlisttitle">Danh sách MODS:<br>
 		</p>
 		<div class="list">

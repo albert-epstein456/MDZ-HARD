@@ -7,7 +7,7 @@
 - Mod Loader của **AlphaSystemsPL**
 [Github](https://github.com/AlphaSystemsPL)<br>
 (tui có chỉnh một chút để load được mod ở bản này - Dungx)
-- Script toolkit của **civert0**
+- Script toolkit, perf window, lootbox, v.v (chi tiết ở trong game) của **civert0**
 [FB](https://www.facebook.com/darren276/)
 - Code quicksave của **cplusplusnoob**
 [YTB](https://www.youtube.com/@cplusplusnoob-g3h)<br>
@@ -16,3 +16,7 @@
 https://web.telegram.org/k/#@likefreefun
 - Grip Minidayz vn:<br>
 https://www.facebook.com/groups/711416839430296
+- Grip Minidayz Community:<br>
+https://www.facebook.com/groups/113129736106807
+- Grip Mod:<br>
+https://www.facebook.com/groups/5040610139346983
