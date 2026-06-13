@@ -21,7 +21,7 @@
   "chestTypes": {
     "type1": {
       "id": "type1",
-      "name": "Military Container Box",
+      "name": "Thùng chứa quân sự",
       "closed": "images/chest1.png",
       "closedHL": "images/chest1_h.png",
       "open": "images/chest2.png",
@@ -183,7 +183,7 @@
     },
     "type2": {
       "id": "type2",
-      "name": "Wooden Drawer",
+      "name": "Ngăn kéo",
       "closed": "images/chest3.png",
       "closedHL": "images/chest3_h.png",
       "open": "images/chest4.png",
@@ -345,7 +345,7 @@
     },
     "type3": {
       "id": "type3",
-      "name": "Old Wooden Large Storage",
+      "name": "Thùng gỗ",
       "closed": "images/chest5.png",
       "closedHL": "images/chest5_h.png",
       "open": "images/chest6.png",
@@ -507,7 +507,7 @@
     },
     "type4": {
       "id": "type4",
-      "name": "Barrel Container",
+      "name": "Thùng phuy gỗ",
       "closed": "images/barrel1.png",
       "closedHL": "images/barrel1_h.png",
       "open": "images/barrel2.png",
@@ -669,7 +669,7 @@
     },
     "type5": {
       "id": "type5",
-      "name": "Tier IV Secured Military Container",
+      "name": "Hộp quân sự cấp IV",
       "closed": "images/yellowchest1.png",
       "closedHL": "images/yellowchest1_h.png",
       "open": "images/yellowchest2.png",
@@ -881,7 +881,7 @@
     },
     "type6": {
       "id": "type6",
-      "name": "School Locker",
+      "name": "Tủ khóa học sinh",
       "closed": "images/school_locker1.png",
       "closedHL": "images/school_locker1_h.png",
       "open": "images/school_locker2.png",
@@ -1018,7 +1018,7 @@
     },
     "type7": {
       "id": "type7",
-      "name": "Tent Ammunition Crate",
+      "name": "Hộp đạn",
       "closed": "images/tent_crate1.png",
       "closedHL": "images/tent_crate1_h.png",
       "open": "images/tent_crate2.png",
@@ -1155,7 +1155,7 @@
     },
     "vending": {
       "id": "vending",
-      "name": "Vending Machine",
+      "name": "Máy bán hàng tự động",
       "closed": "images/vending_machine_0.png",
       "closedHL": "images/vending_machine0_h.png",
       "open": "images/vending_machine_1.png",
@@ -1272,7 +1272,7 @@
     },
     "cabinet": {
       "id": "cabinet",
-      "name": "Cabinet Wardrobe",
+      "name": "Tủ quần áo",
       "closed": "images/cabinet_0.png",
       "closedHL": "images/cabinet_0H.png",
       "open": "images/cabinet_0.png",
@@ -1434,7 +1434,7 @@
     },
     "kitchen": {
       "id": "kitchen",
-      "name": "Kitchen Drawer",
+      "name": "Ngăn kéo nhà bếp",
       "closed": "images/kitchen_0.png",
       "closedHL": "images/kitchen_0H.png",
       "open": "images/kitchen_0.png",
@@ -1566,7 +1566,7 @@
     },
     "kitchenF": {
       "id": "kitchenF",
-      "name": "Fridge",
+      "name": "Tủ lạnh",
       "closed": "images/kitchenF_0.png",
       "closedHL": "images/kitchenF_0H.png",
       "open": "images/kitchenF_0.png",
@@ -1713,7 +1713,7 @@
     },
     "smallcab": {
       "id": "smallcab",
-      "name": "Small Wooden Drawer",
+      "name": "Ngăn kéo nhỏ",
       "closed": "images/smallcab_0.png",
       "closedHL": "images/smallcab_0H.png",
       "open": "images/smallcab_0.png",
@@ -1830,7 +1830,7 @@
     },
     "chest_blue": {
       "id": "chest_blue",
-      "name": "Blue Tier II Drop Container",
+      "name": "Hộp xanh dương cấp II",
       "closed": "images/chest_blue_0.png",
       "closedHL": "images/chest_blue_0H.png",
       "open": "images/chest_blue_1.png",
@@ -2072,7 +2072,7 @@
     },
     "chest_green": {
       "id": "chest_green",
-      "name": "Green Tier I Container",
+      "name": "Hộp xanh lá cây cấp I",
       "closed": "images/chest_green_0.png",
       "closedHL": "images/chest_green_0H.png",
       "open": "images/chest_green_1.png",
@@ -2284,7 +2284,7 @@
     },
     "chest_red": {
       "id": "chest_red",
-      "name": "Red Tier III Container",
+      "name": "Hộp màu đỏ cấp III",
       "closed": "images/chest_red_0.png",
       "closedHL": "images/chest_red_0H.png",
       "open": "images/chest_red_1.png",
@@ -2496,7 +2496,7 @@
     },
     "black_chest": {
       "id": "black_chest",
-      "name": "Black Military Container",
+      "name": "Hộp quân sự màu đen",
       "closed": "images/black_chest_0.png",
       "closedHL": "images/black_chest_0H.png",
       "open": "images/black_chest_1.png",

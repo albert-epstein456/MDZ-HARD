@@ -3,17 +3,17 @@
 //Altered by Dungx
 
 
-const {mods}=await(await fetch("mods.json")).json();
-let install=localStorage.getItem("mods") || `["server-simulator"]`;
-install=JSON.parse(install);
+const {mods} = await(await fetch("mods.json")).json();
+let install = localStorage.getItem("mods") || `["server-simulator"]`;
+install = JSON.parse(install);
 
-const link=document.createElement("link");
-link.rel="shortcut icon";
-link.href="icon-256.png";
+const link = document.createElement("link");
+link.rel = "shortcut icon";
+link.href = "icon-256.png";
 document.head.append(link);
 
-const style=document.createElement("style");
-style.innerHTML=/*css*/ `
+const style = document.createElement("style");
+style.innerHTML = /*css*/ `
 #mods{
 	font-family: monospace;
 	position:fixed;
@@ -40,7 +40,6 @@ style.innerHTML=/*css*/ `
 /* link rainbow: https://www.html-code-generator.com/html/rainbow-text-generator#css-rainbow */
 #mods .welcome-title{
 	font-size: 30px;
-	margin-bottom: 10px;
 	letter-spacing: 2px;
 }
 #mods .rainbow-text{
@@ -147,70 +146,76 @@ style.innerHTML=/*css*/ `
 	position: absolute;
 	bottom:0;
 	left:0;
-	right: 0;
+	right:0;
 	font-size:25px;
 	padding:16px 0;
 	cursor: pointer;
 }
 #mods .start:hover{
-    background: linear-gradient(to left, #f00, #ff2b00, #f50, #ff8000, #fa0, #ffd500, #ff0, #d4ff00, #af0, #80ff00, #5f0, #2bff00, #0f0, #00ff2a, #0f5, #00ff80, #0fa, #00ffd5, #0ff, #00d5ff, #0af, #0080ff, #05f, #002aff, #00f, #2b00ff, #50f, #8000ff, #a0f, #d400ff, #f0f, #ff00d4, #f0a, #ff0080, #f05, #ff002b, #f00);
-    animation: rainbow-move-left-right 5s linear infinite alternate;
-    -webkit-background-clip: text;
-    background-clip: text;
-	-webkit-text-fill-color: transparent;
+	font-size: 26px;
 	letter-spacing: 2px;
 }
 `;
 document.head.append(style);
 
 // Change the directory to game's folder (here is /1.9.6 HARD/)
-const cache=await caches.open(`c2offline-${location.origin}/1.9.6 HARD/`);
+const cache = await caches.open(`c2offline-${location.origin}/1.9.6 HARD/`);
 
-const offline=[
+const offline = [
 	"mods.js",
 	"mods.json",
 ];
 for(const src of offline){
-	const response=await fetch(src);
+	const response = await fetch(src);
 	await cache.put(src,response);
 };
 
 // Check if mods are enabled previously and create info
-let list=``;
+let list = ``;
 for(const mod of mods){
-	let checked="";
-	if(install.includes(mod.script)) checked="checked";
-	if(mod.description=="") mod.description="No description.";
-	if(mod.notes=="") mod.notes="&nbsp;";
-	list+=/*html*/`
+	let checked = "";
+	let altauthor = "";
+	if(install.includes(mod.script)) checked = "checked";
+	if(mod.description == "") mod.description = "No description.";
+	if(mod.author == ""){
+		altauthor = `<span class = "author">Unknown</span>`
+	}
+	else {
+		altauthor = `<span class = "author rainbow-text">${mod.author}</span>`
+	}
+	if(mod.notes == "") mod.notes = "&nbsp;";
+	if(mod.version == "") mod.version = "Unk";
+	list += /*html*/`
 		<label>
 			<div>
-				<span class="mod_name">${mod.name}</span>
-				<span class="version"> ver.${mod.version}</span>
-				<p class="author rainbow-text">Làm bởi: ${mod.author}</p>
-				<span class="description">${mod.description}</span>
-				<span class="notes">${mod.notes}</span>
+				<span class = "mod_name">${mod.name}</span>
+				<span class = "version"> ver.${mod.version}</span>
+				<br>
+				<span style = "font-size: 14px;">Làm bởi: </span>
+				${altauthor}
+				<span class = "description">${mod.description}</span>
+				<span class = "notes">${mod.notes}</span>
 			</div>
-			<input type="checkbox" data-mod="${mod.script}" ${checked}>
+			<input type = "checkbox" data-mod = "${mod.script}" ${checked}>
 			<mark></mark>
 		</label>
 	`;
-	const response=await fetch(`./mods/${mod.script}.js`);
+	const response = await fetch(`./mods/${mod.script}.js`);
 	await cache.put(`mods/${mod.script}.js`,response);
 };
 
 // Create window
-const div=document.createElement("div");
-div.id="mods";
-div.innerHTML=/*html*/`
-	<div class="content">
-		<p class="rainbow-text welcome-title">!!! Welcome to MDZ !!!</p>
-		<p class="modlisttitle">Danh sách MODS:<br>
+const div = document.createElement("div");
+div.id = "mods";
+div.innerHTML = /*html*/`
+	<div class = "content">
+		<p class = "rainbow-text welcome-title">!!! Welcome to MDZ !!!</p>
+		<p class = "modlisttitle">Danh sách MODS:<br>
 		</p>
-		<div class="list">
-			${list}
+		<div class = "list">
+			${list}<br>
 		</div>
-		<a class="start">START</a>
+		<a class = "start rainbow-text">START</a>
 	</div>
 `;
 div.querySelector(".start").addEventListener("pointerup",start);
@@ -220,28 +225,28 @@ console.log("mod.js is loaded");
 // Wait until START button is pressed, then load the mods
 // Some mods require c2runtime.js to be in same mods' directory
 async function start(){
-	install=[];
+	globalThis.mods = mods
+	install = [];
 	document.querySelectorAll("#mods input[data-mod]").forEach(function(e){
 		if(e.checked){
-			const mod=e.getAttribute("data-mod");
+			const mod = e.getAttribute("data-mod");
 			install.push(mod);
 		}
 	});
+	globalThis.install = install;
 	div.remove();
 	style.remove();
-
 	for(const mod of mods){
 		if(!install.includes(mod.script)) continue;
-		const e=(await import(`./mods/${mod.script}.js`));
+		if(mod.script == "") continue;
+		if(mod.extension != "") continue;
+		const e = (await import(`./mods/${mod.script}.js`));
 		if(e.install) await e.install();
 	}
-
 	localStorage.setItem("mods",JSON.stringify(install));
-	console.log(install);
-
 	// Start the game
 	// Create new runtime using the c2canvas
-	window.c2runtime=cr_createRuntime("c2canvas");
+	window.c2runtime = cr_createRuntime("c2canvas");
 	
 	// Pause and resume on page becoming visible/invisible
 	function onVisibilityChanged() {
