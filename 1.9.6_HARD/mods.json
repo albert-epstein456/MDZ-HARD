@@ -4,7 +4,7 @@
 			"name":"Inject Tool Vi en",
 			"description":"\"Cheat Engine\"của MDZ, hack tgian, vật phẩm, save/load, spawn xe npc, teleport v.v .",
 			"script":"c2injt_loader",
-			"notes":"Đối với máy yếu thì 0 nên bật (siêu lag), nếu muốn bật thì đừng mở màn hình script khi game chưa chạy và bât \"Tắt hoat ảnh bảng\"",
+			"notes":"Đối với máy yếu thì 0 nên bật (siêu lag), nếu muốn bật thì đừng mở màn hình script khi game chưa chạy và bật \"Tắt hoat ảnh bảng\"",
 			"version":"31.0",
 			"author":"Civert0, Dungx (VH, script extension)",
 			"extension":""
