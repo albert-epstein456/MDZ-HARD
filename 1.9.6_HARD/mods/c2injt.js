@@ -761,7 +761,7 @@
                     <button class="glass-btn stat-btn" data-var="ALL" data-i18n="stGod" style="padding:15px; margin-top:10px; background:rgba(255,0,0,0.2); border-color:#f00; box-shadow:0 0 15px rgba(255,0,0,0.3);">✨ GOD MODE (ALL)</button>
                     <div style="color:#aaa; font-size:10px; text-align:center; margin-top:15px; margin-bottom:5px; border-bottom:1px dashed #444; padding-bottom:3px;">--- LƯU/TẢI SAVE ---</div>
                     <button class ="glass-btn" onclick="window.manualSave()" style="padding:15px; margin-top:10px; color:#0f0; border-color:#0f0; background:rgba(0,255,0,0.1); box-shadow:0 0 15px rgba(0,255,0,0.2);">LƯU</button>
-                    <button class ="glass-btn" onclick="window.manualLoad()" style="padding:15px; margin-top:10px; color:#00ffff26; border-color:#00ffff26; background:rgba(0,255,255,0.15); box-shadow:0 0 15px rgba(0,255,255,0.17);">TẢI</button>
+                    <button class ="glass-btn" onclick="window.manualLoad()" style="padding:15px; margin-top:10px; color:#f55; border-color:#f55; background:rgba(255,85,85,0.15); box-shadow:0 0 15px rgba(255,85,85,0.17);">TẢI</button>
                     <div style="display:flex; justify-content:space-between; align-items:center; background:rgba(255,0,0,0.2); padding:6px 8px; border-radius:4px; border:1px solid rgba(255,0,0,0.4); margin-top:15px; margin-bottom:5px;">
                         <span style="color:#f55; font-size:11px; font-weight:bold;" data-i18n="unlockAdvStats">Unlock Advanced Stats</span>
                         <label class="switch-sm" style="margin:0;"><input type="checkbox" id="adv-stats-toggle"><span class="slider"></span></label>
