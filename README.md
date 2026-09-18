@@ -11,9 +11,6 @@
 (tui có chỉnh một chút để load được mod ở bản này - Dungx)
 - Script toolkit, perf window, lootbox, v.v (chi tiết ở trong game) của **civert0**
 [FB](https://www.facebook.com/darren276/)
-- Code quicksave của **cplusplusnoob**
-[YTB](https://www.youtube.com/@cplusplusnoob-g3h)<br>
-(*Tui tạo code đấy thành 1 script rồi thêm vào toolkit*<br>trên dưới dạng nút lưu/tải ở phần hồi phục*)
 - Telegram MiniDAYZ Start:<br>
 https://web.telegram.org/k/#@likefreefun
 - Grip Minidayz vn:<br>
