@@ -5,18 +5,9 @@
 			"description":"\"Cheat Engine\"của MDZ, hack tgian, vật phẩm, save/load, spawn xe npc, teleport v.v .",
 			"script":"c2injt_loader",
 			"notes":"Đối với máy yếu thì 0 nên bật (siêu lag), nếu muốn bật thì đừng mở màn hình script khi game chưa chạy và bật \"Tắt hoat ảnh bảng\"",
-			"version":"31.0",
-			"author":"Civert0, Dungx (VH, script extension)",
+			"version":"31.2f",
+			"author":"Civert0, Dungx (VH)",
 			"extension":""
-		},
-		{
-			"name":"Quicksave/load extension",
-			"description":"Lưu/tải nhanh game",
-			"script":"quicksave_load",
-			"notes":"Đây là một \"Extension\" cho cái Inject Tool. Bạn vẫn phải tự edit script gốc để tạo UI, nút cho extension vì tui ếu có cách để nhét đc code vào script.",
-			"version":"1.0.0",
-			"author":"Dungx, cplusplusnoob, Claude :V (text box bay lên)",
-			"extension":"c2injt"
 		},
 		{
 			"name":"Zoom",
