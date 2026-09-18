@@ -1,5 +1,6 @@
 # MDZ HARD VH
 ***MOD CHÍNH CỦA GAME: chest_gl.js SẼ KHÔNG HOẠT ĐỘNG KHI CHẠY BẢN WEB TRÊN PC. VÌ VẬY, HÃY XÀI BẢN ZIP PC***
+---
 ***[Bấm đây để mở game](https://albert-epstein456.github.io/MDZ-HARD/1.9.6_HARD/)***
 ---
 **MDZ VH chạy trên Web**
